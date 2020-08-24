@@ -29,4 +29,17 @@
         android:src="@drawable/ic_mic"
         android:contentDescription="@string/todo" />
 
+    <TextView
+        android:id="@+id/clickMic"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerHorizontal="true"
+        android:layout_alignParentBottom="true"
+        android:layout_marginBottom="100dp"
+        android:text="Click this mic to begin"
+        android:textColor="#000"
+        android:textSize="26sp"
+        android:padding="20sp"
+        android:textStyle="normal"/>
+
 </RelativeLayout>

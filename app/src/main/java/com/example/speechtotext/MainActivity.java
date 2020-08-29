@@ -9,6 +9,7 @@ import android.content.Intent;
 import android.os.Bundle;
 import android.speech.RecognizerIntent;
 import android.view.View;
+import android.widget.Button;
 import android.widget.TextView;
 import android.widget.Toast;
 
@@ -20,12 +21,14 @@ import java.util.Locale;
 public class MainActivity extends AppCompatActivity {
 
     TextView outputText;
+    private Button button;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
         outputText = (TextView) findViewById(R.id.txvResult);
+        button = (Button)findViewById(R.id.button);
     }
 
     public void btnSpeech(View view) {
@@ -52,8 +55,17 @@ public class MainActivity extends AppCompatActivity {
                     ArrayList<String> result = data.getStringArrayListExtra(RecognizerIntent.EXTRA_RESULTS);
 
                     outputText.setText(result.get(0));
+
+                    //Setting the visibility of button as true
+                    Button resetButton=(Button)findViewById(R.id.button);
+                    resetButton.setVisibility(View.VISIBLE);
                 }
                 break;
         }
+    }
+
+    public void viewDetail(View view) {
+        Intent intent = new Intent(this, details.class);
+        startActivity(intent);
     }
 }

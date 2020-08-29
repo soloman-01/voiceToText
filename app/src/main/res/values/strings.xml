@@ -1,4 +1,6 @@
 <resources>
     <string name="app_name">SpeechToText</string>
     <string name="todo">TODO</string>
+    <string name="view_detail_info">View Detail Info</string>
+    <string name="click_this_mic_to_begin">Click this mic to begin</string>
 </resources>
